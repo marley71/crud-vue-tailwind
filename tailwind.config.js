@@ -2,9 +2,11 @@
 const colors = require('tailwindcss/colors')
 const laravelProject = '/home/vagrant/workspace/newgit/abruzzo/';
 module.exports = {
+    mode: 'jit',
     content: [
         './src/**/*.vue',
         './static/*.html',
+        './src/**/*.js',
         laravelProject + 'resources/views/crud-vue-tailwind/**/*.blade.php',
         laravelProject + 'public/crud-vue-tailwind/pages/**/*.html'
     ],
@@ -22,6 +24,9 @@ module.exports = {
             },
             transformOrigin: {
                 "0": "0%",
+            },
+            colors : {
+              "green" : colors.green,
             },
             // colors: {
             //     'transparent-black' : 'rgba(0,0,0,.2)',
