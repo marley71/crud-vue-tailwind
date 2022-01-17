@@ -1,5 +1,5 @@
 <template>
-  <div class="portlet">
+  <div class="container shadow">
     <div class="portlet-header border-bottom mb-1 " :class="bgClass">
       <span class="float-left text-dark text-truncate font-weight-medium">{{ label | translate }}</span>&nbsp;
       <div class="float-right">

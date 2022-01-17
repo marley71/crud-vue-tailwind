@@ -1,5 +1,5 @@
 <template>
-  <div v-html="value">
+  <div class="w-full" v-html="value">
   </div>
 </template>
 

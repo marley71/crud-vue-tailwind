@@ -1,14 +1,12 @@
 <template>
-  <div class="input-group mb-3">
+  <div class="flex">
     <div v-if="selectedLabel" class="input-group-prepend">
       <span class="input-group-text">{{ label }}</span>
     </div>
     <input type="text" c-autocomplete class="form-control">
-    <div v-if="clearButton" class="input-group-append">
-      <button type="button" class="btn btn-outline-secondary" v-on:click="clear">
+    <button v-if="clearButton" type="button" class="outline outline-gray-500" v-on:click="clear">
         <i class="fa fa-times"></i>
-      </button>
-    </div>
+    </button>
     <input v-model="value" :name="getFieldName()" type="hidden" >
   </div>
 </template>

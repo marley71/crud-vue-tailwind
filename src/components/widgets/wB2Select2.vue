@@ -1,5 +1,5 @@
 <template>
-    <select c-select2 class="form-control m-select2" :placeholder="translate('app.digita-per-cercare')"
+    <select c-select2 class="w-full form-select m-select2" :placeholder="translate('app.digita-per-cercare')"
             :name="getFieldName()" v-model="value" v-on:change="change">
     </select>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="input-group form-control">
+  <div class="flex flex-row">
     <input type="hidden" :name="startFieldName" >
     <input type="hidden" :name="endFieldName" >
     <input class="w-100 border-0" c-picker>

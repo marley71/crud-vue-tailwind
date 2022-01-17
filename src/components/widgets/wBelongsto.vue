@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="w-full">
         <span v-for="(field, index) in labelFields" :key="index">
             {{value[field]}}&nbsp;
             <span v-if="index < labelFields.length - 1"> - </span>

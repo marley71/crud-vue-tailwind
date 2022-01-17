@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="row">
-      <div class="col-8">
-        <div v-show="error" class="alert alert-danger">{{ errorMessage }}</div>
+    <div class="w-full">
+      <div class="flex flex-row">
+        <div v-show="error" class="text-red-800">{{ errorMessage }}</div>
         <input type="hidden" v-model="value" :name="getFieldName()">
         <div>
           <div v-show="extensions">

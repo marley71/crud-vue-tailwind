@@ -1,5 +1,5 @@
 <template>
-    <span>{{formattedValue}}</span>
+    <span class="w-full">{{formattedValue}}</span>
 </template>
 
 <script>

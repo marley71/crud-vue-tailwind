@@ -1,5 +1,5 @@
 <template>
-  <div class="input-group form-control">
+  <div class="flex flex-row">
     <input class="w-100 border-0 datepicker" c-picker >
     <input type="hidden" v-model="value" v-bind:name="getFieldName()" v-on:change="change">
     <button v-if="buttonClear" class="close-icon" type="button" v-on:click="reset()"></button>

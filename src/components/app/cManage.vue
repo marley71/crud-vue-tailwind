@@ -1,5 +1,5 @@
 <template>
-  <div class="portlet">
+  <div class="container swadow">
     <div class="portlet-header border-bottom mb-1 text-left" :class="manageHeaderClass">
       <span class="d-block text-truncate font-weight-medium" :class="manageHeaderTextClass">
         Gestione {{ translate(modelName + '.label', 1) }}
@@ -27,26 +27,27 @@
 
             </div>
 
+              <div class="collapse" c-collapse-edit>
+                  <div class="portlet">
+
+                      <!-- portlet : header -->
+                      <div class="portlet-header border-bottom mb-3" :class="$crud.env.layoutGradientColor">
+                        <span class="d-block text-white text-truncate font-weight-medium" v-show="updateTitle">
+                          {{updateTitle}}
+                        </span>
+                      </div>
+                      <!-- /portlet : header -->
+
+                      <div class="portlet-body pb-0" c-edit-container>
+
+                      </div>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
 
-      <div class="collapse" c-collapse-edit>
-        <div class="portlet">
 
-          <!-- portlet : header -->
-          <div class="portlet-header border-bottom mb-3" :class="$crud.env.layoutGradientColor">
-            <span class="d-block text-white text-truncate font-weight-medium" v-show="updateTitle">
-              {{updateTitle}}
-            </span>
-          </div>
-          <!-- /portlet : header -->
-
-          <div class="portlet-body pb-0" c-edit-container>
-
-          </div>
-        </div>
-      </div>
     </div>
 
     <div c-view_dialog class="modal" tabindex="-1" role="dialog"
@@ -96,7 +97,15 @@ export default {
     _dynamicData (conf) {
       conf.collapseId = 'manageCollapse' + conf.modelName
       return conf
-    }
+    },
+    showEdit() {
+        this.jQe('[c-collapse-edit]').removeClass('d-none');
+        this.jQe('[c-collapse-list]').addClass('d-none');
+    },
+      showList() {
+          this.jQe('[c-collapse-edit]').addClass('d-none');
+          this.jQe('[c-collapse-list]').removeClass('d-none');
+      }
   }
 }
 </script>

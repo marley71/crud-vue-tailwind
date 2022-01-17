@@ -1,16 +1,17 @@
 // tailwind.config.js
 const colors = require('tailwindcss/colors')
-
+const laravelProject = '/home/vagrant/workspace/newgit/abruzzo/';
 module.exports = {
-    purge: [
+    content: [
         // './resources/assets/**/*.blade.php',
         // './resources/assets/**/*.js',
         './src/**/*.vue',
-        // './resources/views/tailwind/**/*.blade.php',
-        // './public/pages/*.html',
+        laravelProject + 'resources/views/crud-vue-tailwind/**/*.blade.php',
+        './static/*.html',
+        laravelProject + 'public/crud-vue-tailwind/pages/**/*.html'
         // './test-vue/hello/src/**/*.vue'
     ],
-    darkMode: false, // or 'media' or 'class'
+    darkMode: true, // or 'media' or 'class'
     theme: {
         extend: {
             zIndex: {
@@ -29,7 +30,11 @@ module.exports = {
                 'transparent-black' : 'rgba(0,0,0,.2)',
                 'orange' : colors.orange,
                 'info' : '#73e7f7',
-                'brand' : '#4E8C95'
+                'brand' : '#4E8C95',
+                'green' : colors.green,
+                'red' : colors.red,
+                'yellow': colors.yellow,
+                'gray' : colors.gray
             },
             fontFamily: {
                 'layout' : ['Sriracha'],
