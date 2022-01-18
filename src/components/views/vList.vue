@@ -1,6 +1,6 @@
 <template>
     <!-- start:row -->
-    <div v-if="template === 'default'">
+    <div class="w-100" v-if="template === 'default'">
         <c-loading v-if="loading" :error-msg="errorMsg"></c-loading>
         <div v-else >
             <div class="portlet-header border-bottom" :class="headerClass">

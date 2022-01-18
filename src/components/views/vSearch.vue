@@ -9,16 +9,16 @@
 
         <div class="shadow sm:rounded-md sm:overflow-hidden">
             <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
-          <div class="grid grid-cols-2 sm:grid-cols-1">
+          <div class="grid grid-cols-2 sm:grid-cols-2 gap-4">
             <div v-for="(widget, key) in widgets" :key="key" :class="key.replace('|','-')" >
               <v-widget :c-widget="widget" v-if="!isHiddenField(key)" :key="key"></v-widget>
             </div>
           </div>
         </div>
-        <div class="w-full">
+        <div v-if="advancedFields.length > 0" class="w-100">
             <a class="cursor-pointer text-primary" v-on:click="toggleAdvanced()">
-                <span v-show="!advancedVisible"><i class="fa fa-arrow-to-bottom"></i></span>
-                <span v-show="advancedVisible"><i class="fa fa-arrow-to-top"></i></span>
+                <span v-show="!advancedVisible"><i class="fa fa-angle-down"></i></span>
+                <span v-show="advancedVisible"><i class="fa fa-angle-up"></i></span>
                 <span v-show="!advancedVisible">{{'app.mostra-ricerca-avanzata' | translate}}</span>
                 <span v-show="advancedVisible">{{'app.nascondi-ricerca-avanzata' | translate}}</span>
             </a>
