@@ -1,19 +1,15 @@
 <template>
     <!-- hover:text-bold hover:bg-gray-500 -->
     <button v-if="controlType=='button'" type="button" v-show="_visible"
-            class="inline-block text-center text-sm leading-1 px-2 py-1
-                border border-gray-300
-                shadow-md"
-            :title="title | translate" :class="css" v-on:click="_execute" v-bind:disabled="_disabled">
-        <i class="m-1 align-middle" v-show="icon" :class="icon"></i>
-        <span class="align-middle">{{ text | translate }}</span>
+            class="btn"
+            :title="title | translate" :class="css" v-on:click="_execute" :disabled="_disabled">
+        <i class="text-xs font-normal leading-none max-w-full flex-initial" v-show="icon" :class="icon"></i>&nbsp;
+        <span class="text-xs font-normal leading-none max-w-full flex-initial">{{ text | translate }}</span>
     </button>
-    <a v-else class="inline-block text-center text-sm leading-1 px-2 py-1
-                border border-gray-300
-                shadow-md" :target="target" :href="href" v-show="_visible"
+    <a v-else class="btn" :target="target" :href="href" v-show="_visible"
        :title="title | translate" :class="css" :disabled="_disabled">
         <i class="m-1" v-show="icon" :class="icon"></i>
-        <span>{{ text | translate }}</span>
+        <span class="text-xs font-normal leading-none max-w-full flex-initial">{{ text | translate }}</span>
     </a>
 </template>
 

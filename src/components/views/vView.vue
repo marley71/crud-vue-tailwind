@@ -13,7 +13,7 @@
     <template v-for="(widget, key) in widgets" >
       <v-widget v-if="isHiddenField(key)" :c-widget="widget" :key="key"></v-widget>
     </template>
-    <div class="px-4 py-3 bg-gray-50 text-right sm:px-6" v-if="actions.length">
+    <div class="p-2 bg-gray-50" v-if="actions.length">
       <template v-for="(action,name) in actionsConf">
         <v-action :c-action="action" :key="name"></v-action>
       </template>

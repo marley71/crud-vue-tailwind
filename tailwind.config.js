@@ -26,7 +26,10 @@ module.exports = {
                 "0": "0%",
             },
             colors : {
-              "green" : colors.green,
+                "brand" : colors.amber,
+                "success" : colors.green,
+                "warning" : colors.yellow,
+                "danger" : colors.red,
             },
             // colors: {
             //     'transparent-black' : 'rgba(0,0,0,.2)',

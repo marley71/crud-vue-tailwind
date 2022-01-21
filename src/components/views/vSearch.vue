@@ -30,8 +30,8 @@
             </template>
           </div>
         </div>
-        <div class="px-4 py-3 bg-gray-50 text-right sm:px-6" :class="buttonsClass">
-          <div class="p-3" v-show="actions.length">
+        <div class="p-2 bg-gray-50" :class="buttonsClass">
+          <div v-show="actions.length">
             <template v-for="(action,name) in actionsConf">
               <v-action :c-action="action" :key="name"></v-action>
             </template>

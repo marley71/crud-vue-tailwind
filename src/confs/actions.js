@@ -1,13 +1,19 @@
 import { crud, Server } from 'crud-vue-core'
+import jQuery from "jquery";
 
 crud.conf['action-record-grouped'].css = 'btn btn-sm btn-outline-primary rounded-circle'
+jQuery.extend(crud.conf['a-order'],{
+    iconSortAsc: 'fa fa-sort-up',
+    iconSortDesc: 'fa fa-sort-down',
+    iconSort: 'fa fa-sort',
+})
 
 // ------ ridefinizione del confParent
-crud.conf['action-save'].componentName = 'a-square'
-crud.conf['action-save-back'].componentName = 'a-square'
-crud.conf['action-back'].componentName = 'a-square'
-crud.conf['action-search'].componentName = 'a-square'
-crud.conf['action-reset'].componentName = 'a-square'
+// crud.conf['action-save'].componentName = 'a-square'
+// crud.conf['action-save-back'].componentName = 'a-square'
+// crud.conf['action-back'].componentName = 'a-square'
+// crud.conf['action-search'].componentName = 'a-square'
+// crud.conf['action-reset'].componentName = 'a-square'
 
 // crud.conf['action-save'].confParent = 'a-square'
 // crud.conf['action-save-back'].confParent = 'a-square'

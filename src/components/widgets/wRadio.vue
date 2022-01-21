@@ -2,7 +2,7 @@
     <div class="w-100 flex flex-row items-center mr-4 mb-4" :class="inline?'flex-row':'flex-col'">
         <div v-for="key in domainValuesOrder" :key="key" >
             <input type="radio" :name="getFieldName()" class="hidden" v-model="value" v-on:change="change" />
-            <label for="radio1" class="flex items-center cursor-pointer text-xl">
+            <label :for="getFieldName()" class="flex items-center cursor-pointer text-xl">
                 <span class="w-8 h-8 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
                 {{ domainValues[key] }}</label>
         </div>
