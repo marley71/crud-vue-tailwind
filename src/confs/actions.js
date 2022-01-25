@@ -26,8 +26,16 @@ crud.conf['action-save'].css = 'btn-sm mr-1 bg-green-300'
 crud.conf['action-search'].css = 'btn-sm mr-1 bg-blue-300'
 crud.conf['action-reset'].css = 'btn-sm mr-1 bg-yellow-300'
 crud.conf['action-back'].css = 'btn-sm mr-1 bg-red-300'
-crud.conf['action-insert'].css = 'bg-blue-300 btn-group mr-1'
-crud.conf['action-delete-selected'].css = 'outline-red-300 mr-1'
+
+jQuery.extend(crud.conf['action-insert'],{
+    componentName : 'a-square',
+    css : 'bg-blue-300 mr-1',
+})
+jQuery.extend(crud.conf['action-delete-selected'],{
+    componentName : 'a-square',
+    css : 'bg-danger-300 mr-1',
+})
+
 crud.conf['action-edit'].css = 'outline-gray-300'
 crud.conf['action-delete'].css = 'outline-red-300'
 crud.conf['action-view'].css = 'outline-gray-300'

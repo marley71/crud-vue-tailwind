@@ -1,5 +1,6 @@
 // tailwind.config.js
 const colors = require('tailwindcss/colors')
+
 const laravelProject = '/home/vagrant/workspace/newgit/abruzzo/';
 module.exports = {
     mode: 'jit',
@@ -30,6 +31,9 @@ module.exports = {
                 "success" : colors.green,
                 "warning" : colors.yellow,
                 "danger" : colors.red,
+            },
+            fontSize : {
+                "xxs" : '.50rem'
             },
             // colors: {
             //     'transparent-black' : 'rgba(0,0,0,.2)',

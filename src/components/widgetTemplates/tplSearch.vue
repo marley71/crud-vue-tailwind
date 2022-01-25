@@ -3,9 +3,9 @@
   <div v-else class="row">
 
     <div class="col-12 mb-1">
-      <div class="form-label-group">
+      <div class="relative border-b-2 focus-within:border-blue-500">
         <component :is="cWidget.type" :c-conf="cWidget"></component>
-        <label :for="cWidget.name">
+        <label class="absolute top-0 -z-1 duration-300 origin-0" :for="cWidget.name">
           {{ cWidget.label }} {{cWidget.required?'*':''}}
         </label>
       </div>

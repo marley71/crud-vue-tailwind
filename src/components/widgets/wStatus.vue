@@ -1,8 +1,11 @@
 <template>
-  <span v-for="key in domainValuesOrder" :key="key" v-show="key==value">
-    <span v-if="statusType=='text'">{{ domainValues[key] }}</span>
-    <i v-if="statusType=='icon'" :class="domainValues[key]"></i>
-  </span>
+    <span>
+        <template v-for="key in domainValuesOrder">
+            <span v-if="statusType=='text'"  :key="key" v-show="key==value" >{{ domainValues[key] }}</span>
+            <i v-if="statusType=='icon'" :class="domainValues[key]" :key="key" v-show="key==value"></i>
+        </template>
+    </span>
+
 </template>
 
 <script>

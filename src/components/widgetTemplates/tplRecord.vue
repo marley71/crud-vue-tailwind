@@ -5,7 +5,7 @@
       {{ cWidget.label }} {{cWidget.required?'*':''}}
     </label>
     <component :is="cWidget.type" :c-conf="cWidget"></component>
-    <label v-if="cTemplate.labelType === 'bottom'" :for="cWidget.name">
+    <label class="absolute top-0 -z-1 duration-300 origin-0" v-if="cTemplate.labelType === 'bottom'" :for="cWidget.name">
       {{ cWidget.label }} {{cWidget.required?'*':''}}
     </label>
   </div>

@@ -6,7 +6,7 @@
             <div class="portlet-header border-bottom" :class="headerClass">
                 <span v-show="viewTitle">{{ viewTitle }}</span>
                 <!-- options and pagination -->
-                <div class="row justify-content-end">
+                <div class="flex flex-row">
 
                     <div v-if="paginator" class="col-12 col-md-6 mt-1 mb-2">
                         <!-- v-bind:c-route-conf="routeConf" -->
@@ -77,7 +77,7 @@
                                             <input c-row-check type="checkbox" :value="value[index][primaryKey]">
                                         </td>
                                         <td v-show="recordActionsName.length" class="px-6 py-4 whitespace-nowrap">
-                                            <div class="btn-group" role="group">
+                                            <div class="inline-flex rounded-md shadow-sm" role="group">
                                                 <template v-for="(action,name) in recordActions[index]">
                                                     <v-action :c-action="action" :key="name"></v-action>
                                                 </template>
