@@ -1,5 +1,5 @@
 <template>
-  <input :placeholder="label" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" :type="inputType" v-model="value" :name="getFieldName()"
+  <input :placeholder="label" class="block w-full rounded appearance-none focus:outline-none bg-transparent" :type="inputType" v-model="value" :name="getFieldName()"
          v-on:change="change">
 </template>
 

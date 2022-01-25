@@ -1,6 +1,6 @@
 <template>
     <!-- start:row -->
-    <div class="w-100" v-if="template === 'default'">
+    <div class="w-100 border border-brand-100 rounded" v-if="template === 'default'">
         <c-loading v-if="loading" :error-msg="errorMsg"></c-loading>
         <div v-else>
             <div class="portlet-header border-bottom" :class="headerClass">
@@ -15,8 +15,7 @@
                     </div>
                     <div class="col-12 col-md-6 mt-1 mb-2" v-show="collectionActionsName.length">
                         <template v-for="name in collectionActionsName">
-                            <component v-bind:is="name" v-bind:c-conf="collectionActions[name]"
-                                       :key="name"></component>
+                            <component v-bind:is="name" v-bind:c-conf="collectionActions[name]" :key="name"></component>
                         </template>
                     </div>
 
@@ -32,24 +31,23 @@
             <div class="flex flex-col">
                 <div class="overflow-x-auto">
                     <div class="align-middle inline-block min-w-full">
-                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                            <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-gray-50">
+                        <div class="shadow overflow-hidden border-b border-brand-200 sm:rounded-lg">
+                            <table class="min-w-full divide-y divide-brand-200">
+                                <thead class="bg-brand-50">
                                 <tr v-if="widgets.length > 0">
                                     <th v-if="needSelection" scope="col"
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        class="px-6 py-3 text-left text-xs font-medium text-brand-500 uppercase tracking-wider">
                                         <input c-row-check-all v-on:change="selectAllRows" class="checkall" type="checkbox">
                                     </th>
                                     <th v-show="recordActionsName.length"></th>
                                     <template v-for="key in keys">
                                         <th v-if="!isHiddenField(key)"
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            class="px-6 py-3 text-left text-xs font-medium text-brand-500 uppercase tracking-wider"
                                             :class="key" :key="key">
                                             <a-order v-if="orderFields[key]" :c-conf="getOrderConf(key)"></a-order>
-                                            <span v-else style="cursor:default"
-                                                  class="mr-1 text-gray-500 font-weight-normal fs--14">{{
-                                                    widgets[0][key].label
-                                                }}</span>
+                                            <span style="cursor:default"
+                                                  class="mr-1 text-brand-500 font-weight-normal fs--14"
+                                                  v-else>{{ widgets[0][key].label }}</span>
                                             <button v-if="hasHelp(key)"
                                                     type="button"
                                                     class="btn-xs btn-squared btn-light"
@@ -65,12 +63,12 @@
                                     </template>
                                 </tr>
                                 <tr v-if="widgets.length == 0">
-                                    <th class="text-gray-500 w--50">
+                                    <th class="text-brand-500 w--50">
                                         {{ "app.nessun-elemento" | translate }}
                                     </th>
                                 </tr>
                                 </thead>
-                                <tbody class="bg-white divide-y divide-gray-200">
+                                <tbody class="bg-white divide-y divide-brand-200">
                                 <template v-for="(row,index) in widgets">
                                     <tr :key="index">
                                         <td v-if="needSelection" class="px-6 py-4 whitespace-nowrap">
@@ -93,8 +91,7 @@
                                         </template>
 
                                         <template v-for="(widget, key) in row">
-                                            <v-widget v-if="isHiddenField(key)" :c-widget="widget"
-                                                      :key="key"></v-widget>
+                                            <v-widget v-if="isHiddenField(key)" :c-widget="widget" :key="key"></v-widget>
                                         </template>
                                     </tr>
                                     <tr :id="'ghost_container' +  index" class="d-none" :key="'ghost_'+index">
@@ -144,7 +141,7 @@
                                 <table class="table table-framed table-striped table-bordered">
                                     <thead>
                                     <tr v-if="widgets.length > 0">
-                                        <th v-if="needSelection" class="text-gray-500 w--50">
+                                        <th v-if="needSelection" class="text-brand-500 w--50">
                                             <label class="form-checkbox form-checkbox-primary float-start">
                                                 <input c-row-check-all v-on:change="selectAllRows"
                                                        class="checkall" type="checkbox">
@@ -154,9 +151,9 @@
                                         <th v-show="recordActionsName.length"></th>
                                         <template v-for="key in keys">
                                             <th v-if="!isHiddenField(key)"
-                                                class="text-gray-500 font-weight-normal fs--14" :class="key" :key="key">
+                                                class="text-brand-500 font-weight-normal fs--14" :class="key" :key="key">
                                     <span style="cursor:default"
-                                          class="mr-1 text-gray-500 font-weight-normal fs--14"
+                                          class="mr-1 text-brand-500 font-weight-normal fs--14"
                                     >{{ widgets[0][key].label }}</span>
                                                 <a v-if="hasHelp(key)"
                                                    type="button"
@@ -174,7 +171,7 @@
 
                                     </tr>
                                     <tr v-if="widgets.length == 0">
-                                        <th class="text-gray-500 w--50"> <!-- v-show="recordActionsName.length" -->
+                                        <th class="text-brand-500 w--50"> <!-- v-show="recordActionsName.length" -->
                                             {{ "app.nessun-elemento" | translate }}
                                         </th>
                                     </tr>

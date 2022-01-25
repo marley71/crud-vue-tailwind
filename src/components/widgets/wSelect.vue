@@ -1,5 +1,5 @@
 <template>
-  <select class="form-select px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full" v-bind:name="getFieldName()" v-model="value" v-bind:c-marker="cMarker"
+  <select class="block w-full rounded appearance-none focus:outline-none bg-transparent" v-bind:name="getFieldName()" v-model="value" v-bind:c-marker="cMarker"
           v-on:change="change">
     <option v-for="key in domainValuesOrder" :value="key" :key="key"
     >{{ domainValues[key] }}

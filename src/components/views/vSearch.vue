@@ -7,8 +7,8 @@
             <v-widget  v-if="isHiddenField(key)" :c-widget="widget" :key="key"></v-widget>
         </template>
 
-        <div class="shadow sm:rounded-md sm:overflow-hidden">
-            <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+        <div class="shadow sm:rounded-md sm:overflow-hidden border border-brand-100">
+            <div class="px-3 py-4 bg-white space-y-4 sm:p-4">
           <div class="grid grid-cols-2 sm:grid-cols-2 gap-4">
             <div v-for="(widget, key) in widgets" :key="key" :class="key.replace('|','-')" >
               <v-widget :c-widget="widget" v-if="!isHiddenField(key)" :key="key"></v-widget>
@@ -30,7 +30,7 @@
             </template>
           </div>
         </div>
-        <div class="p-2 bg-gray-50" :class="buttonsClass">
+        <div class="p-2 bg-brand-50" :class="buttonsClass">
           <div v-show="actions.length">
             <template v-for="(action,name) in actionsConf">
               <v-action :c-action="action" :key="name"></v-action>

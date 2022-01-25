@@ -31,6 +31,7 @@ module.exports = {
                 "success" : colors.green,
                 "warning" : colors.yellow,
                 "danger" : colors.red,
+                "info" : colors.blue,
             },
             fontSize : {
                 "xxs" : '.50rem'
@@ -58,6 +59,7 @@ module.exports = {
     variants: {
         borderRadius : ['responsive','first','last'],
         borderWidth : ['responsive','first','last'],
+        borderColor: ['responsive', 'hover', 'focus', 'focus-within'],
         extend: {
             backgroundColor: ['odd','even'],
         }

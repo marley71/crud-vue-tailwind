@@ -1,12 +1,12 @@
 <template>
     <!-- start:row -->
-    <div class="w-100">
+    <div class="w-100 border border-brand-100 rounded" v-if="template === 'default'">
         <c-loading v-if="loading" :error-msg="errorMsg"></c-loading>
         <div v-else>
             <div class="portlet-header border-bottom" :class="headerClass">
                 <span v-show="viewTitle">{{ viewTitle }}</span>
                 <!-- options and pagination -->
-                <div class="row justify-content-end">
+                <div class="flex flex-row">
 
                     <div v-if="paginator" class="col-12 col-md-6 mt-1 mb-2">
                         <!-- v-bind:c-route-conf="routeConf" -->
@@ -31,21 +31,22 @@
             <div class="flex flex-col">
                 <div class="overflow-x-auto">
                     <div class="align-middle inline-block min-w-full">
-                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                            <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-gray-50">
+                        <div class="shadow overflow-hidden border-b border-brand-200 sm:rounded-lg">
+                            <table class="min-w-full divide-y divide-brand-200">
+                                <thead class="bg-brand-50">
                                 <tr v-if="widgets.length > 0">
-                                    <th v-if="needSelection" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    <th v-if="needSelection" scope="col"
+                                        class="px-6 py-3 text-left text-xs font-medium text-brand-500 uppercase tracking-wider">
                                         <input c-row-check-all v-on:change="selectAllRows" class="checkall" type="checkbox">
                                     </th>
                                     <th v-show="recordActionsName.length"></th>
                                     <template v-for="key in keys">
                                         <th v-if="!isHiddenField(key)"
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            class="px-6 py-3 text-left text-xs font-medium text-brand-500 uppercase tracking-wider"
                                             :class="key" :key="key">
                                             <a-order v-if="orderFields[key]" :c-conf="getOrderConf(key)"></a-order>
                                             <span style="cursor:default"
-                                                  class="mr-1 text-gray-500 font-weight-normal fs--14"
+                                                  class="mr-1 text-brand-500 font-weight-normal fs--14"
                                                   v-else>{{ widgets[0][key].label }}</span>
                                             <button v-if="hasHelp(key)"
                                                     type="button"
@@ -60,7 +61,6 @@
 
                                         </th>
                                     </template>
-
                                 </tr>
                                 <tr v-if="widgets.length == 0">
                                     <th v-show="recordActionsName.length" class="text-gray-500 w--50">
@@ -68,14 +68,14 @@
                                     </th>
                                 </tr>
                                 </thead>
-                                <tbody class="bg-white divide-y divide-gray-200">
+                                <tbody class="bg-white divide-y divide-brand-200">
                                 <template v-for="(row,index) in widgets">
                                     <tr :key="index">
                                         <td v-if="needSelection" class="px-6 py-4 whitespace-nowrap">
                                             <input c-row-check type="checkbox" :value="value[index][primaryKey]">
                                         </td>
                                         <td v-show="recordActionsName.length" class="px-6 py-4 whitespace-nowrap">
-                                            <div class="btn-group" role="group">
+                                            <div class="inline-flex rounded-md shadow-sm" role="group">
                                                 <template v-for="(action,name) in recordActions[index]">
                                                     <v-action :c-action="action" :key="name"></v-action>
                                                 </template>

@@ -1,11 +1,11 @@
 <template>
   <component v-if="cWidget.type==='w-hidden'" :is="cWidget.type" :c-conf="cWidget"></component>
-  <div :class="getLayoutClass()"  v-else>
+  <div class="my-4 relative border-b-2 focus-within:border-blue-500" :class="getLayoutClass()"  v-else>
     <label v-if="cTemplate.labelType === 'top'" :for="cWidget.name">
       {{ cWidget.label }} {{cWidget.required?'*':''}}
     </label>
     <component :is="cWidget.type" :c-conf="cWidget"></component>
-    <label class="absolute top-0 -z-1 duration-300 origin-0" v-if="cTemplate.labelType === 'bottom'" :for="cWidget.name">
+    <label class="absolute top-0 z-1 duration-300 origin-1" v-if="cTemplate.labelType === 'bottom'" :for="cWidget.name">
       {{ cWidget.label }} {{cWidget.required?'*':''}}
     </label>
   </div>

@@ -14,7 +14,22 @@ export default {
     'cTime': {
       default: 2000
     }
-  }
+  },
+    methods: {
+        show () {
+            var that = this;
+            if (that.cTime !== 0) {
+                setTimeout(function() {
+                    that.hide();
+                }, that.cTime);
+            }
+        },
+        hide () {
+            var that = this;
+            that.$destroy();
+            window.jQuery(that.jQe()).remove();
+        },
+    }
 }
 </script>
 

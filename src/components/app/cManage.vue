@@ -1,5 +1,5 @@
 <template>
-    <div class="box-content w-full p-4 border-4">
+    <div class="box-content w-full p-4">
         <!-- ... -->
         <h6>Gestione {{ translate(modelName + '.label', 1) }}</h6>
         <div>
