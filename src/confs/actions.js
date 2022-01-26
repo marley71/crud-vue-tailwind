@@ -36,12 +36,12 @@ jQuery.extend(crud.conf['action-delete-selected'],{
     css : 'btn bg-danger-300 py-1 px-2',
 })
 
-crud.conf['action-edit'].css = 'inline-block bg-gray-300 py-1 px-2'
+crud.conf['action-edit'].css = 'inline-block bg-gray-100 py-1 px-2'
 crud.conf['action-delete'].css = 'inline-block bg-red-300 py-1 px-2'
-crud.conf['action-view'].css = 'inline-block bg-gray-300 py-1 px-2'
-crud.conf['action-edit-mode'].css = 'inline-block bg-gray-300 py-1 px-2'
-crud.conf['action-save-row'].css = 'inline-block bg-gray-300 py-1 px-2'
-crud.conf['action-view-mode'].css = 'inline-block bg-gray-300 py-1 px-2'
+crud.conf['action-view'].css = 'inline-block bg-gray-100 py-1 px-2'
+crud.conf['action-edit-mode'].css = 'inline-block bg-gray-100 py-1 px-2'
+crud.conf['action-save-row'].css = 'inline-block bg-gray-100 py-1 px-2'
+crud.conf['action-view-mode'].css = 'inline-block bg-gray-100 py-1 px-2'
 
 // ------ nuove azioni ---
 crud.conf['action-export-csv-codici'] = {}

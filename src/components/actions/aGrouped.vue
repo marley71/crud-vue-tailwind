@@ -1,39 +1,37 @@
 <template>
-  <div class="clearfix" v-show="_visible" :title="title | translate" :disabled="_disabled" >
-    <a href="#" :class="css"
-       data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-      <span class="group-icon">
-          <i class="fi fi-dots-vertical-full"></i>
-          <i class="fi fi-close"></i>
-      </span>
-    </a>
-    <div
-      class="dropdown-menu dropdown-menu-clean dropdown-click-ignore max-w-220">
-      <div class="scrollable-vertical max-h-50vh">
-        <template v-for="(action,name) in actionsConfig">
-<!--          <v-action :c-action="action" :key="name"></v-action>-->
-          <component :is="action.componentName" :c-conf="action" inline-template :key="name">
-            <a class="dropdown-item text-truncate cursor-pointer" v-if="_visible"
-               :class="name + ' ' +css" v-on:click="_execute"
-               target="_blank">
-              <i :class="icon"></i> {{text}}
-            </a>
-          </component>
-        </template>
-      </div>
+    <div class="flex flex-col" v-show="_visible" :title="title | translate" :disabled="_disabled" >
+        <button type="button" href="#" :class="css" v-on:click="toggle()" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+              <i class="fa fa-bars" :class="!open?'':'hidden'"></i>
+              <i class="fa-solid fa-square-xmark" :class="open?'':'hidden'"></i>
+        </button>
+        <div class="flex flex-col z-40 absolute mt-10 ml-2 bg-brand-50 rounded p-1" :class="open?'':'hidden'">
+            <template v-for="(action,name) in actionsConfig">
+                <component :is="action.componentName" :c-conf="action" inline-template :key="name">
+                    <a class="dropdown-item text-truncate cursor-pointer" v-if="_visible"
+                       :class="name + ' ' +css" v-on:click="_execute"
+                       target="_blank">
+                        <i :class="icon"></i> {{ (text || title) | translate }}
+                    </a>
+                </component>
+            </template>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
 import cComponent from '../misc/cComponent'
-import {aGroupedMixin} from 'crud-vue-core'
+import {aGroupedMixin,crud} from 'crud-vue-core'
 
-
+crud.conf['a-grouped'].open = false;
 export default {
   name: 'a-grouped',
   extends: cComponent,
-  mixins: [aGroupedMixin]
+  mixins: [aGroupedMixin],
+    methods: {
+      toggle() {
+          this.open = !this.open;
+      }
+    }
 }
 
 </script>
