@@ -36,16 +36,6 @@ module.exports = {
             fontSize : {
                 "xxs" : '.50rem'
             },
-            // colors: {
-            //     'transparent-black' : 'rgba(0,0,0,.2)',
-            //     'orange' : colors.orange,
-            //     'info' : '#73e7f7',
-            //     'brand' : '#4E8C95',
-            //     'green' : colors.green,
-            //     'red' : colors.red,
-            //     'yellow': colors.yellow,
-            //     'gray' : colors.gray
-            // },
             fontFamily: {
                 'layout' : ['Sriracha'],
                 'body' : ['Roboto','sans-serif']

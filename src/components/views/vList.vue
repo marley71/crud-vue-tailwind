@@ -7,26 +7,16 @@
                 <span v-show="viewTitle">{{ viewTitle }}</span>
                 <!-- options and pagination -->
                 <div class="flex flex-row">
-
-                    <div v-if="paginator" class="col-12 col-md-6 mt-1 mb-2">
-                        <!-- v-bind:c-route-conf="routeConf" -->
-                        <c-paginator v-if="widgets.length > 0" v-show="pagination"
-                                     :c-conf="pagination"></c-paginator>
+                    <div v-if="paginator" class="col-12 col-md-6 mt-2 mb-2">
+                        <c-paginator v-if="widgets.length > 0" v-show="pagination" :c-conf="pagination"></c-paginator>
                     </div>
-                    <div class="col-12 col-md-6 mt-1 mb-2" v-show="collectionActionsName.length">
+                    <div class="mt-2 mb-2" v-show="collectionActionsName.length">
                         <template v-for="name in collectionActionsName">
                             <component v-bind:is="name" v-bind:c-conf="collectionActions[name]" :key="name"></component>
                         </template>
                     </div>
 
                 </div>
-                <!-- /options and pagination -->
-
-                <!-- header -->
-                <!-- portlet : header -->
-                <!-- /portlet : header -->
-
-                <!-- /header -->
             </div>
             <div class="flex flex-col">
                 <div class="overflow-x-auto">

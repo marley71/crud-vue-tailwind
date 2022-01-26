@@ -1,7 +1,7 @@
 <template>
     <!-- hover:text-bold hover:bg-gray-500 -->
     <button v-if="controlType=='button'" type="button" v-show="_visible"
-            class="btn"
+            class=""
             :title="title | translate" :class="css" v-on:click="_execute" :disabled="_disabled">
         <i class="text-xs font-normal leading-none max-w-full flex-initial" v-show="icon" :class="icon"></i>&nbsp;
         <span class="text-xs font-normal leading-none max-w-full flex-initial">{{ text | translate }}</span>

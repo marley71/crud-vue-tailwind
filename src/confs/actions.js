@@ -22,26 +22,26 @@ jQuery.extend(crud.conf['a-order'],{
 // crud.conf['action-reset'].confParent = 'a-square'
 
 // ------ ridefinizione css
-crud.conf['action-save'].css = 'btn-sm mr-1 bg-green-300'
-crud.conf['action-search'].css = 'btn-sm mr-1 bg-blue-300'
-crud.conf['action-reset'].css = 'btn-sm mr-1 bg-yellow-300'
-crud.conf['action-back'].css = 'btn-sm mr-1 bg-red-300'
+crud.conf['action-save'].css = 'btn mr-1 bg-green-300'
+crud.conf['action-search'].css = 'btn mr-1 bg-blue-300'
+crud.conf['action-reset'].css = 'btn mr-1 bg-yellow-300'
+crud.conf['action-back'].css = 'btn mr-1 bg-red-300'
 
 jQuery.extend(crud.conf['action-insert'],{
     componentName : 'a-square',
-    css : 'bg-blue-300 mr-1',
+    css : 'btn bg-success-300 py-1 px-2',
 })
 jQuery.extend(crud.conf['action-delete-selected'],{
     componentName : 'a-square',
-    css : 'bg-danger-300 mr-1',
+    css : 'btn bg-danger-300 py-1 px-2',
 })
 
-crud.conf['action-edit'].css = 'outline-gray-300'
-crud.conf['action-delete'].css = 'outline-red-300'
-crud.conf['action-view'].css = 'outline-gray-300'
-crud.conf['action-edit-mode'].css = 'outline-gray-300'
-crud.conf['action-save-row'].css = 'outline-gray-300'
-crud.conf['action-view-mode'].css = 'outline-gray-300'
+crud.conf['action-edit'].css = 'inline-block bg-gray-300 py-1 px-2'
+crud.conf['action-delete'].css = 'inline-block bg-red-300 py-1 px-2'
+crud.conf['action-view'].css = 'inline-block bg-gray-300 py-1 px-2'
+crud.conf['action-edit-mode'].css = 'inline-block bg-gray-300 py-1 px-2'
+crud.conf['action-save-row'].css = 'inline-block bg-gray-300 py-1 px-2'
+crud.conf['action-view-mode'].css = 'inline-block bg-gray-300 py-1 px-2'
 
 // ------ nuove azioni ---
 crud.conf['action-export-csv-codici'] = {}
@@ -82,7 +82,7 @@ Object.assign(
   crud.conf['action-save'],
   {
     text: 'Salva e torna alla lista',
-    css: 'btn-sm mr-1 btn-success bg-success-soft'
+    css: 'btn-sm mr-1 bg-success-soft'
     // alertTime: 0,
   })
 

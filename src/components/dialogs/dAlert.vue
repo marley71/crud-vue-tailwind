@@ -34,5 +34,13 @@ export default {
 </script>
 
 <style scoped>
-
+.crud-alert {
+    z-index:100000;
+    width:50%;
+    left:25%;
+}
+body .crud-alert {
+    position: fixed;
+    top: 0;
+}
 </style>
