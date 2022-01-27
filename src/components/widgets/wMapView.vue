@@ -1,5 +1,5 @@
 <template>
-    <div c-map></div>
+    <div class="w-full" c-map></div>
 </template>
 
 <script>

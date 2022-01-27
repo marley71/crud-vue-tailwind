@@ -60,12 +60,12 @@
                                 </thead>
                                 <tbody class="bg-white divide-y divide-brand-200">
                                 <template v-for="(row,index) in widgets">
-                                    <tr :key="index">
+                                    <tr class="hover:bg-brand-50" :key="index">
                                         <td v-if="needSelection" class="px-6 py-4 whitespace-nowrap">
                                             <input c-row-check type="checkbox" :value="value[index][primaryKey]">
                                         </td>
                                         <td v-show="recordActionsName.length" class="px-6 py-4 whitespace-nowrap">
-                                            <div class="inline-flex rounded overflow-hidden shadow-sm" role="group">
+                                            <div class="inline-flex rounded-md overflow-hidden shadow-sm" role="group">
                                                 <template v-for="(action,name) in recordActions[index]">
                                                     <v-action :c-action="action" :key="name"></v-action>
                                                 </template>
@@ -84,7 +84,7 @@
                                             <v-widget v-if="isHiddenField(key)" :c-widget="widget" :key="key"></v-widget>
                                         </template>
                                     </tr>
-                                    <tr :id="'ghost_container' +  index" class="d-none" :key="'ghost_'+index">
+                                    <tr :id="'ghost_container' +  index" class="hidden" :key="'ghost_'+index">
                                         <td :colspan="keys.length+3"></td>
                                     </tr>
                                 </template>
@@ -244,13 +244,13 @@ export default {
             return this.jQe('#ghost_container' + index + ' td')
         },
         showGhostContainer(index) {
-            this.jQe('#ghost_container' + index).removeClass('d-none')
+            this.jQe('#ghost_container' + index).removeClass('hidden')
         },
         hideGhostContainer(index) {
-            this.jQe('#ghost_container' + index).addClass('d-none')
+            this.jQe('#ghost_container' + index).addClass('hidden')
         },
         isVisibleGhostContainer(index) {
-            return !this.jQe('#ghost_container' + index).hasClass('d-none')
+            return !this.jQe('#ghost_container' + index).hasClass('hidden')
         }
     }
 }

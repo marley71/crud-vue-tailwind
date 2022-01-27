@@ -8,7 +8,7 @@
                     {{ 'app.limite-raggiunto' | translate }}
                 </span>
         <button v-else v-on:click="addItem" type="button"
-                class="btn-sm btn-pill px-2 py-1 fs--15 btn-warning">
+                class="outline outline-success-400 rounded text-success-400 px-2">
           <span>{{ 'app.aggiungi' | translate }}</span>&nbsp;
         </button>
       </div>
@@ -21,11 +21,8 @@
              :key="index">
           <div class="card p-1 m-0
                      shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-60 border-danger bl-0 br-0 bb-0 bw--2">
-            <!--<div class="card-header" crud-hasmany_title>-->
-            <!--{{cConf.metadata.modelName}}-->
-            <!--</div>-->
             <div class="card-header bg-white">
-              <button v-on:click="deleteItem(item.cRef)" class="btn-danger btn-pill btn-xs float-right"
+              <button v-on:click="deleteItem(item.cRef)" class="outline outline-danger-400 rounded text-danger-400 px-2"
                       type="button" title="Cancella elemento"><i class="fa fa-trash"></i>
               </button>
             </div>

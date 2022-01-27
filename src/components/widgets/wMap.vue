@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-full">
     <!-- input hidden for form compatibiliy --->
     <input type="hidden" :name="lngName">
     <input type="hidden" :name="latName">

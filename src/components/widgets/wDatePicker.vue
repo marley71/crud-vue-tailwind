@@ -1,8 +1,10 @@
 <template>
   <div class="flex flex-row">
-    <input class="w-100 border-0 datepicker" c-picker >
+    <input class="block w-full rounded appearance-none focus:outline-none bg-transparent" c-picker >
     <input type="hidden" v-model="value" v-bind:name="getFieldName()" v-on:change="change">
-    <button v-if="buttonClear" class="close-icon" type="button" v-on:click="reset()"></button>
+    <button class="border border-gray-50 rounded-r px-3" v-if="buttonClear" type="button" v-on:click="reset()">
+        <i class="fa fa-times"></i>
+    </button>
   </div>
 </template>
 

@@ -1568,12 +1568,12 @@ textarea:not(:placeholder-shown) ~ label {
   border-radius: 0.25rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-lg {
@@ -1701,6 +1701,11 @@ textarea:not(:placeholder-shown) ~ label {
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+
+.border-gray-50 {
+  --tw-border-opacity: 1;
+  border-color: rgb(249 250 251 / var(--tw-border-opacity));
 }
 
 .border-gray-400 {
@@ -2207,9 +2212,24 @@ textarea:not(:placeholder-shown) ~ label {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.text-brand-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity));
+}
+
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-success-400 {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
+}
+
+.text-danger-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
 }
 
 .text-blue-500 {
@@ -2332,8 +2352,12 @@ textarea:not(:placeholder-shown) ~ label {
   outline-style: solid;
 }
 
-.outline-gray-100 {
-  outline-color: #f3f4f6;
+.outline-success-400 {
+  outline-color: #4ade80;
+}
+
+.outline-danger-400 {
+  outline-color: #f87171;
 }
 
 .outline-brand-900 {
@@ -2448,6 +2472,11 @@ textarea:not(:placeholder-shown) ~ label {
 .hover\:bg-gray-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-brand-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 251 235 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-blue-500:hover {

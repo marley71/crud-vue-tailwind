@@ -5,7 +5,7 @@
         </div>
         <template v-if="clearButton">
             <input type="text" c-autocomplete class="rounded-l border-gray-100">
-            <button type="button" class="outline outline-gray-100 rounded-r px-2" v-on:click="clear">
+            <button type="button" class="border border-gray-50 rounded-r px-3" v-on:click="clear">
                 <i class="fa fa-times"></i>
             </button>
         </template>
