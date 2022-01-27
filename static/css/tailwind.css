@@ -2272,6 +2272,11 @@ textarea:not(:placeholder-shown) ~ label {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
+.text-success-300 {
+  --tw-text-opacity: 1;
+  color: rgb(134 239 172 / var(--tw-text-opacity));
+}
+
 .text-green-300 {
   --tw-text-opacity: 1;
   color: rgb(134 239 172 / var(--tw-text-opacity));
@@ -2358,6 +2363,10 @@ textarea:not(:placeholder-shown) ~ label {
 
 .outline-danger-400 {
   outline-color: #f87171;
+}
+
+.outline-success-300 {
+  outline-color: #86efac;
 }
 
 .outline-brand-900 {
