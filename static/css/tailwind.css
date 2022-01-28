@@ -1278,8 +1278,16 @@ textarea:not(:placeholder-shown) ~ label {
   width: 2rem;
 }
 
+.w-14 {
+  width: 3.5rem;
+}
+
 .w-12 {
   width: 3rem;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-auto {
@@ -1294,12 +1302,12 @@ textarea:not(:placeholder-shown) ~ label {
   width: 12rem;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-28 {
   width: 7rem;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .min-w-full {
@@ -1352,6 +1360,11 @@ textarea:not(:placeholder-shown) ~ label {
 
 .origin-top-right {
   transform-origin: top right;
+}
+
+.translate-x-6 {
+  --tw-translate-x: 1.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .translate-x-full {
@@ -1431,6 +1444,10 @@ textarea:not(:placeholder-shown) ~ label {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1839,6 +1856,16 @@ textarea:not(:placeholder-shown) ~ label {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
 .bg-green-400 {
@@ -2295,6 +2322,20 @@ textarea:not(:placeholder-shown) ~ label {
 .text-yellow-600 {
   --tw-text-opacity: 1;
   color: rgb(202 138 4 / var(--tw-text-opacity));
+}
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.decoration-brand-500 {
+  -webkit-text-decoration-color: #f59e0b;
+          text-decoration-color: #f59e0b;
+}
+
+.underline-offset-2 {
+  text-underline-offset: 2px;
 }
 
 .placeholder-gray-400::-moz-placeholder {

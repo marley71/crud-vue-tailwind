@@ -6,18 +6,18 @@
                 <input type="hidden" v-model="value" :name="getFieldName()">
                 <div class="flex flex-row">
                     <div v-show="extensions">
-                        <span crud-label="app.accepted-extensions">Estensioni accettate: </span>
-                        <span v-show="extensions">{{ extensions.join(',') }}</span>
+                        <div >{{ 'app.accepted-extensions' | translate }}</div>
+                        <div >{{ extensions.join(',') }}</div>
                     </div>
                     <div v-show="maxFileSize">
-                        Dimensione massima: <span crud-label="app.upload-max-filesize">{{ maxFileSize }}</span>
+                        {{ 'app.dimensione-massima' | translate}}: <span >{{ maxFileSize }}</span>
                     </div>
                 </div>
                 <div>
                     <input c-file class="" type="file" v-on:change="validate()">
                 </div>
             </div>
-            <div class="py-2 px-2">
+            <div class="py-2 px-2 flex justify-center w-1/2">
                 <w-preview :c-conf="previewConf"></w-preview>
             </div>
         </div>

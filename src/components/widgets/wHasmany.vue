@@ -13,9 +13,7 @@
         </button>
       </div>
     </div>
-    <div class="portlet-body">
-      <input type="hidden" value="1">
-      <div class="row">
+    <div class="w-full">
         <div class="col-12 col-lg-6 col-xl-6 mt-2" v-for="(item,index) in confViews"
              v-show="showItem(item.cRef)"
              :key="index">
@@ -31,7 +29,6 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </template>
