@@ -26,6 +26,8 @@ crud.conf['action-save'].css = 'btn mr-1 bg-green-300'
 crud.conf['action-search'].css = 'btn mr-1 bg-blue-300'
 crud.conf['action-reset'].css = 'btn mr-1 bg-yellow-300'
 crud.conf['action-back'].css = 'btn mr-1 bg-red-300'
+crud.conf['action-show-error'].css = 'outline outline-danger-300'
+crud.conf['action-mostra-tutti'].css = 'outline outline-gray-300'
 
 jQuery.extend(crud.conf['action-insert'],{
     componentName : 'a-square',

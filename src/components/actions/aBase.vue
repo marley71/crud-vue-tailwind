@@ -1,12 +1,12 @@
 <template>
     <!-- hover:text-bold hover:bg-gray-500 -->
     <button v-if="controlType=='button'" type="button" v-show="_visible"
-            class=""
+            class="rounded-lg px-1 py-1"
             :title="title | translate" :class="css" v-on:click="_execute" :disabled="_disabled">
         <i class="text-xs font-normal leading-none max-w-full flex-initial" v-show="icon" :class="icon"></i>&nbsp;
         <span class="text-xs font-normal leading-none max-w-full flex-initial">{{ text | translate }}</span>
     </button>
-    <a v-else class="btn" :target="target" :href="href" v-show="_visible"
+    <a v-else class="rounded-lg px-1 py-1" :target="target" :href="href" v-show="_visible"
        :title="title | translate" :class="css" :disabled="_disabled">
         <i class="m-1" v-show="icon" :class="icon"></i>
         <span class="text-xs font-normal leading-none max-w-full flex-initial">{{ text | translate }}</span>
