@@ -12,10 +12,6 @@ import cPage from './components/app/cPage'
 // ---    configurazioni tempalte ----
 import './confs/actions'
 import './confs/routes'
-// import 'tailwindcss/base.css'
-// import 'tailwindcss/components.css'
-// import 'tailwindcss/utilities.css'
-
 import '../assets/index.css'
 
 import '@fortawesome/fontawesome-free/css/all.css'

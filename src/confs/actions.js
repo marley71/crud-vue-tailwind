@@ -38,12 +38,12 @@ jQuery.extend(crud.conf['action-delete-selected'],{
     css : 'btn bg-danger-300 py-1 px-2',
 })
 
-crud.conf['action-edit'].css = 'inline-block bg-gray-100 py-1 px-2'
-crud.conf['action-delete'].css = 'inline-block bg-red-300 py-1 px-2'
-crud.conf['action-view'].css = 'inline-block bg-gray-100 py-1 px-2'
-crud.conf['action-edit-mode'].css = 'inline-block bg-gray-100 py-1 px-2'
-crud.conf['action-save-row'].css = 'inline-block bg-gray-100 py-1 px-2'
-crud.conf['action-view-mode'].css = 'inline-block bg-gray-100 py-1 px-2'
+crud.conf['action-edit'].css = ''
+crud.conf['action-delete'].css = 'text-danger-600'
+crud.conf['action-view'].css = ''
+crud.conf['action-edit-mode'].css = ''
+crud.conf['action-save-row'].css = 'text-success-600'
+crud.conf['action-view-mode'].css = ''
 
 // ------ nuove azioni ---
 crud.conf['action-export-csv-codici'] = {}
@@ -139,7 +139,7 @@ crud.conf['action-edit-popup'] = {
     var cConf = {
       modelName: that.view.modelName,
       pk: id,
-      customActions: {
+        actionsConfig: {
         'action-save': {
           afterExecute () {
             that.view.reload()
@@ -179,7 +179,7 @@ crud.conf['action-insert-popup'] = {
     }
     var cConf = {
       modelName: that.view.modelName,
-      customActions: {
+        actionsConfig: {
         'action-save': {
           afterExecute () {
             that.view.reload()

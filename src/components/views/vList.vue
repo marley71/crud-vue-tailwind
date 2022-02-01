@@ -65,7 +65,7 @@
                                             <input c-row-check type="checkbox" :value="value[index][primaryKey]">
                                         </td>
                                         <td v-show="recordActionsName.length" class="px-6 py-4 whitespace-nowrap">
-                                            <div class="inline-flex rounded-md overflow-hidden shadow-sm" role="group">
+                                            <div class="inline-flex rounded-md overflow-hidden shadow-sm border-gray-500" role="group">
                                                 <template v-for="(action,name) in recordActions[index]">
                                                     <v-action :c-action="action" :key="name"></v-action>
                                                 </template>
