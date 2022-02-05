@@ -8,10 +8,8 @@ module.exports = {
         './src/**/*.vue',
         './static/*.html',
         './src/**/*.js',
-        laravelProject + 'resources/views/crud-vue-tailwind/**/*.blade.php',
-        laravelProject + 'public/crud-vue-tailwind/pages/**/*.html',
         laravelProject + 'resources/views/crud-vue-desktop/**/*.blade.php',
-        laravelProject + 'public/crud-vue-desktop/pages/**/*.html',
+        laravelProject + 'public/crud-vue-desktop/pages/**/*.html'
     ],
     darkMode: true, // or 'media' or 'class'
     theme: {
@@ -29,8 +27,7 @@ module.exports = {
                 "0": "0%",
             },
             colors : {
-                //"brand" : colors.amber,
-                "brand" : colors.blue,
+                "brand" : colors.amber,
                 "success" : colors.green,
                 "warning" : colors.yellow,
                 "danger" : colors.red,
