@@ -13,7 +13,7 @@ import cPage from './components/app/cPage'
 import './confs/actions'
 import './confs/routes'
 import '../assets/index.css'
-
+import '../assets/css/select2-tailwindcss/style.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 

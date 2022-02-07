@@ -1,6 +1,6 @@
 <template>
-  <div class="container shadow">
-    <div class="portlet-header border-bottom mb-1 " :class="bgClass">
+  <div class="container shadow " :class="bgClass">
+    <div class="portlet-header border-bottom p-1 " >
       <span class="float-left text-dark text-truncate font-weight-medium">{{ label | translate }}</span>&nbsp;
       <div class="float-right">
                 <span class="d-block text-danger text-truncate font-weight-medium" v-if="outOfLimit()">
@@ -14,17 +14,17 @@
       </div>
     </div>
     <div class="w-full">
-        <div class="col-12 col-lg-6 col-xl-6 mt-2" v-for="(item,index) in confViews"
+        <div class="w-full mt-2" v-for="(item,index) in confViews"
              v-show="showItem(item.cRef)"
              :key="index">
-          <div class="card p-1 m-0
-                     shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-60 border-danger bl-0 br-0 bb-0 bw--2">
+          <div class="p-1
+                     shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-60 border-danger-300">
             <div class="card-header bg-white">
               <button v-on:click="deleteItem(item.cRef)" class="outline outline-danger-400 rounded text-danger-400 px-2"
                       type="button" title="Cancella elemento"><i class="fa fa-trash"></i>
               </button>
             </div>
-            <div class="card-body p-1">
+            <div class="p-1">
               <v-hasmany v-bind:c-model="name" v-bind:c-conf="item"></v-hasmany>
             </div>
           </div>
@@ -35,7 +35,9 @@
 
 <script>
 import wBase from './wBase'
-import {wHasmanyMixin} from 'crud-vue-core'
+import {crud, wHasmanyMixin} from 'crud-vue-core'
+
+crud.conf['w-hasmany'].bgClass = 'bg-white'
 
 export default {
   name: 'w-hasmany',

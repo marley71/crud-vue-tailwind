@@ -14,8 +14,9 @@ import wBase from './wBase'
 import { crud, wTexthtmlMixin } from 'crud-vue-core'
 
 crud.conf['w-texthtml'].resources = [
-  'https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css',
-  'https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js'
+  // 'https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css',
+  // 'https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js'
+    'https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js'
   // 'https://cdn.jsdelivr.net/npm/summernote-bootstrap4@0.0.5/dist/summernote.css',
   // 'https://cdn.jsdelivr.net/npm/summernote-bootstrap4@0.0.5/dist/summernote.min.js'
 ]
@@ -32,20 +33,26 @@ export default {
     },
     afterLoadResources () {
       var that = this
-      var options = that.pluginOptions || {
-        content: that.value
-        // airMode : true
-      }
-      options = this.cloneObj(options)
-      that.jQe('.summernote').summernote(options)
-      that.jQe('.summernote').on('summernote.change', function () {
-        //console.log('Enter/Return key pressed',jQuery('.summernote').summernote('code'))
-        that.jQe('[c-summernote]').val(that.jQe('.summernote').summernote('code'))
-        // that.jQe('[c-sum]').trigger('change')
-        that.change()
-        // that.jQe('[c-sum]').val('hh')
-      })
-      that.jQe('.summernote').summernote('focus')
+
+        ClassicEditor.create(that.jQe('.summernote')[0]).catch((error) => {
+            console.error(error);
+        });
+
+
+      // var options = that.pluginOptions || {
+      //   content: that.value
+      //   // airMode : true
+      // }
+      // options = this.cloneObj(options)
+      // that.jQe('.summernote').summernote(options)
+      // that.jQe('.summernote').on('summernote.change', function () {
+      //   //console.log('Enter/Return key pressed',jQuery('.summernote').summernote('code'))
+      //   that.jQe('[c-summernote]').val(that.jQe('.summernote').summernote('code'))
+      //   // that.jQe('[c-sum]').trigger('change')
+      //   that.change()
+      //   // that.jQe('[c-sum]').val('hh')
+      // })
+      // that.jQe('.summernote').summernote('focus')
     },
     getValue () {
       var that = this

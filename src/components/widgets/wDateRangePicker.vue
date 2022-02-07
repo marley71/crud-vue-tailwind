@@ -2,7 +2,7 @@
   <div class="flex flex-row">
     <input type="hidden" :name="startFieldName" >
     <input type="hidden" :name="endFieldName" >
-    <input class="w-100 border-0" c-picker>
+    <input class="block w-full rounded appearance-none focus:outline-none bg-transparent" c-picker>
   </div>
 </template>
 
