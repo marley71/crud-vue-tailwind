@@ -1,7 +1,7 @@
 // tailwind.config.js
 const colors = require('tailwindcss/colors')
 
-const laravelProject = '/home/vagrant/workspace/newgit/abruzzo/';
+const laravelProject = process.env.LARAVELPROJECT;
 module.exports = {
     mode: 'jit',
     content: [
