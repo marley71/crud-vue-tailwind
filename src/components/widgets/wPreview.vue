@@ -1,11 +1,11 @@
 <template>
   <div>
-    <img class="img-fluid" v-if="getType()=='image'" :src="value.url">
-    <a v-else-if="getType()=='doc'" :href="value.url">
-      <i :class="iconClass + ' ' + iconSize"></i>
+    <img class="img-fluid" v-if="currentMimetype=='image'" :src="value.url">
+    <a v-else-if="currentMimetype=='doc'" :href="value.url">
+      <i :class="iconClass + ' ' + iconSize" crud-icon></i>
     </a>
     <small v-else class="text-danger">
-      <span v-if="value.url">{{ getType() }} mimetype non riconosciuto</span>
+      <span v-if="value.url">{{ currentMimetype }} mimetype non riconosciuto</span>
     </small>
   </div>
 </template>
